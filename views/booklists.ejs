@@ -1,0 +1,31 @@
+<%- include("header") %>
+
+<div class="container">
+<div class="table-container">
+    <h3>List of Books</h3>
+    <input type="text" id="search-input" placeholder="Search by author or title..." onkeyup="searchBooks()">
+    <table id="book-list">
+        <thead>
+            <tr>
+                <th>Author</th>
+                <th>Title</th>
+                <th>Date Uploaded</th>
+            </tr>
+        </thead>
+        <tbody id="book-list-body">
+           
+            <% allBookList.forEach(function(book){ %>
+                <tr>
+                <td> <%= book.author %> </td>
+                <td> <%= book.title %> </td>
+                <td><%= book.currentDate %> </td>
+                </tr>
+                <br>
+            <% }) %>
+           
+        </tbody>
+    </table>
+</div>
+</div>
+
+<%- include("footer") %>

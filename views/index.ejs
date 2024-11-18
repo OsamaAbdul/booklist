@@ -1,0 +1,23 @@
+<%- include("header") %>
+
+    <div class="container">
+        <h1>Book List Manager App</h1>
+        <div class="input-container">
+
+            <form action="/" method="post">
+            <input type="text" id="author" name="author" placeholder="Enter author..." required>
+            <input type="text" id="title" name="title" placeholder="Enter book title..." required>
+            
+            <button type="submit">Add Book</button>
+            </form>
+
+              <hr>
+              <br>
+        <form action="/booklists" method="get">
+                <button type="submit" name="booklist">View Books</button>
+        </form>
+            
+        </div>   
+    </div>
+
+<%- include("footer") %>
