@@ -41,7 +41,7 @@ const Book = mongoose.model("book", booksSchema);
 
 
 //setting up my routes
-app.get("/", (req, res) => {
+app.get("/home", (req, res) => {
     res.render("index");
 });
 
